@@ -1,8 +1,8 @@
-UpsideDownEfffect = {}
-local UpsideDownEfffect_mt = Class(UpsideDownEfffect, LastingEffect)
+UpsideDownEffect = {}
+local UpsideDownEffect_mt = Class(UpsideDownEffect, LastingEffect)
 
-function UpsideDownEfffect.new(name, durationMilliseconds, custom_mt)
-    local self = LastingEffect.new(name, durationMilliseconds, custom_mt or UpsideDownEfffect_mt)
+function UpsideDownEffect.new(name, durationMilliseconds, custom_mt)
+    local self = LastingEffect.new(name, durationMilliseconds, custom_mt or UpsideDownEffect_mt)
     self:overrideFunctions()
     return self
 end
@@ -12,7 +12,7 @@ function InvisibleVehicleEffect:initialize(event)
     return g_currentMission.controlledVehicle == nil
 end
 
-function UpsideDownEfffect:overrideFunctions()
+function UpsideDownEffect:overrideFunctions()
     local effect = self
 
     -- override Player.update

@@ -1,13 +1,13 @@
-InvertControlsEfffect = {}
-local InvertControlsEfffect_mt = Class(InvertControlsEfffect, LastingEffect)
+InvertControlsEffect = {}
+local InvertControlsEffect_mt = Class(InvertControlsEffect, LastingEffect)
 
-function InvertControlsEfffect.new(name, durationMilliseconds, custom_mt)
-    local self = LastingEffect.new(name, durationMilliseconds, custom_mt or InvertControlsEfffect_mt)
+function InvertControlsEffect.new(name, durationMilliseconds, custom_mt)
+    local self = LastingEffect.new(name, durationMilliseconds, custom_mt or InvertControlsEffect_mt)
     self:overrideFunctions()
     return self
 end
 
-function InvertControlsEfffect:overrideFunctions()
+function InvertControlsEffect:overrideFunctions()
     local effect = self
 
     -- override Drivable.actionEventSteer
