@@ -17,6 +17,7 @@ source(Utils.getFilename("scripts/support/fileio.lua", g_currentModDirectory))
 -- load effects
 source(Utils.getFilename("scripts/effects/debug.lua", g_currentModDirectory))
 source(Utils.getFilename("scripts/effects/invisiblevehicle.lua", g_currentModDirectory))
+source(Utils.getFilename("scripts/effects/topdown.lua", g_currentModDirectory))
 
 -- mod definition
 TwitchEvents = {}
@@ -32,6 +33,7 @@ function TwitchEvents:loadMap(name)
     -- register effects
     effectManager:registerEffect(DebugEffect.new("debug", 5000))
     effectManager:registerEffect(InvisibleVehicleEffect.new("invisiblevehicle", 5000))
+    effectManager:registerEffect(TopDownEffect.new("topdown", 10000))
 end
 
 function TwitchEvents:deleteMap()
