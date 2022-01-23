@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<modDesc descVersion="60">
+    <author>DerMitDemRolfTanzt</author>
+    <title>
+        <en>TwitchEvents</en>
+    </title>
+    <description>
+        <en>
+            <![CDATA[This mod enables integration with Twitch Events via WarpWorlds's CrowdControl client. You need to setup the CrowdControl client in order to use this mod.]]>
+        </en>
+    </description>
+    <version>0.1.0</version>
+    <multiplayer supported="true" />
+    <iconFilename>img/store.dds</iconFilename>
+    <extraSourceFiles>
+        <sourceFile filename="twitchEvents.lua" />
+    </extraSourceFiles>
+</modDesc>
