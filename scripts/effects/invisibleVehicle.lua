@@ -3,7 +3,6 @@ local InvisibleVehicleEffect_mt = Class(InvisibleVehicleEffect, LastingEffect)
 
 function InvisibleVehicleEffect.new(name, durationMilliseconds, custom_mt)
     local self = LastingEffect.new(name, durationMilliseconds, custom_mt or InvisibleVehicleEffect_mt)
-    self.active = false
     self:overrideFunctions()
     return self
 end
@@ -15,7 +14,6 @@ function InvisibleVehicleEffect:initialize(event)
     end
 
     self.vehicles = {}
-    self.active = true
 
     -- create shallow copy of vehicle.childVehicles
     for index, value in ipairs(vehicle.childVehicles) do
@@ -34,7 +32,6 @@ function InvisibleVehicleEffect:draw(event)
 end
 
 function InvisibleVehicleEffect:finalize(event)
-    self.active = false
 
     self:setVisibility(true)
 end

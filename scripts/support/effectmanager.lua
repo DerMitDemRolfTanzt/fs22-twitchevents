@@ -40,6 +40,7 @@ function TEEffectManager:triggerEffect(event)
             Logging.info(string.format("[TwitchEvents] Initializing LastingEffect \"%s\" was not successful.", effect.name))
         else
             self.runningEffects[effect.name] = event
+            effect.active = true
         end
         return result
     else
@@ -59,6 +60,7 @@ function TEEffectManager:update(dt)
         else
             Logging.info(string.format("[TwitchEvents] Finalizing LastingEffect \"%s\" after %d milliseconds.", effect.name, event.effectDurationMilliseconds))
             self.runningEffects[effect.name] = nil
+            effect.active = false
             effect:finalize(event)
         end
     end

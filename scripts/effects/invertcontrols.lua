@@ -3,13 +3,11 @@ local InvertControlsEfffect_mt = Class(InvertControlsEfffect, LastingEffect)
 
 function InvertControlsEfffect.new(name, durationMilliseconds, custom_mt)
     local self = LastingEffect.new(name, durationMilliseconds, custom_mt or InvertControlsEfffect_mt)
-    self.active = false
     self:overrideFunctions()
     return self
 end
 
 function InvertControlsEfffect:initialize(event)
-    self.active = true
     return true
 end
 
@@ -20,7 +18,6 @@ function InvertControlsEfffect:draw(event)
 end
 
 function InvertControlsEfffect:finalize(event)
-    self.active = false
 end
 
 function InvertControlsEfffect:overrideFunctions()

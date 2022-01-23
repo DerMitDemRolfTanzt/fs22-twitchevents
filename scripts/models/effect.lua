@@ -35,6 +35,7 @@ function LastingEffect.new(name, durationMilliseconds, custom_mt)
     local self = TEEffect.new("LastingEffect", name, custom_mt or LastingEffect_mt)
 
     self.durationMilliseconds = durationMilliseconds
+    self.active = false
 
     return self
 end
