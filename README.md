@@ -10,6 +10,7 @@ This mod is in a very early stage of development. Use at your own risk!
 * `debug`: Print a debug message on screen
 * `invisiblevehicle`: Hide the currently controlled vehicle for a few seconds
 * `topdown`: Force Top-Down Camera for a few seconds
+* `invertcontrols`: Invert left/right axis controls for a few seconds
 
 
 ## License

@@ -202,6 +202,7 @@ namespace CrowdControl.Games.Packs
                     new Effect("Debug Message", "debug"),
                     new Effect("Invisible Vehicle", "invisiblevehicle"),
                     new Effect("Top Down Camera", "topdown"),
+                    new Effect("Invert Controls", "invertcontrols"),
                 };
                 return result;
             }
