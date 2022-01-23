@@ -7,7 +7,7 @@ function UpsideDownEffect.new(name, durationMilliseconds, custom_mt)
     return self
 end
 
-function InvisibleVehicleEffect:initialize(event)
+function UpsideDownEffect:initialize(event)
     -- This effect currently only works outside of vehicles
     return g_currentMission.controlledVehicle == nil
 end

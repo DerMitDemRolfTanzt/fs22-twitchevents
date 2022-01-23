@@ -37,7 +37,7 @@ function TwitchEvents:loadMap(name)
     effectManager:registerEffect(InvisibleVehicleEffect.new("invisiblevehicle", 5000))
     effectManager:registerEffect(TopDownEffect.new("topdown", 10000))
     effectManager:registerEffect(InvertControlsEffect.new("invertcontrols", 10000))
-    effectManager:registerEffect(upsideDownEffect.new("upsidedown", 10000))
+    effectManager:registerEffect(UpsideDownEffect.new("upsidedown", 10000))
 end
 
 function TwitchEvents:deleteMap()
