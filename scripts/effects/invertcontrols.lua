@@ -7,19 +7,6 @@ function InvertControlsEfffect.new(name, durationMilliseconds, custom_mt)
     return self
 end
 
-function InvertControlsEfffect:initialize(event)
-    return true
-end
-
-function InvertControlsEfffect:update(dt, event)
-end
-
-function InvertControlsEfffect:draw(event)
-end
-
-function InvertControlsEfffect:finalize(event)
-end
-
 function InvertControlsEfffect:overrideFunctions()
     local effect = self
 

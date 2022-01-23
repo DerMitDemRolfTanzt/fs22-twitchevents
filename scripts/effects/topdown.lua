@@ -24,9 +24,6 @@ function TopDownEffect:update(dt, event)
     self:updateCameraPosition()
 end
 
-function TopDownEffect:draw(event)
-end
-
 function TopDownEffect:finalize(event)
     setCamera(self.prevCamera)
     self:deleteCamera()

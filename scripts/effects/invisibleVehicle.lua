@@ -25,14 +25,7 @@ function InvisibleVehicleEffect:initialize(event)
     return true
 end
 
-function InvisibleVehicleEffect:update(dt, event)
-end
-
-function InvisibleVehicleEffect:draw(event)
-end
-
 function InvisibleVehicleEffect:finalize(event)
-
     self:setVisibility(true)
 end
 

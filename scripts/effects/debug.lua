@@ -6,13 +6,6 @@ function DebugEffect.new(name, durationMilliseconds, custom_mt)
     return self
 end
 
-function DebugEffect:initialize(event)
-    return true
-end
-
-function DebugEffect:update(dt, event)
-end
-
 function DebugEffect:colorOverTime(event)
     local result = {}
     table.insert(result, math.max(0, math.min(1, (3 * event.effectDurationMilliseconds / self.durationMilliseconds) - 0)))
@@ -30,7 +23,4 @@ function DebugEffect:draw(event)
     local r, g, b = self:colorOverTime(event)
     setTextColor(r, g, b, 0.75)
     renderText(0.5, 0.08, getCorrectTextSize(0.025), string.format("User \"%s\" invoked effect \"%s\".", event.DisplayViewer, event.InventoryItem))
-end
-
-function DebugEffect:finalize(event)
 end
