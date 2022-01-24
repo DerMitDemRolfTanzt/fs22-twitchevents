@@ -1,4 +1,4 @@
-# ![store.png](img/store.png) TwitchEffects for Farming Simulator 22
+# ![store.png](img/store.png) TwitchEvents for Farming Simulator 22
 This mod enables integration with Twitch Events via WarpWorlds's CrowdControl client. You need to setup the CrowdControl client in order to use this mod.
 
 
