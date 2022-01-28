@@ -32,8 +32,8 @@ end
 function TopDownEffect:createCamera()
     self.camera = createCamera("TopDownEffectCamera", math.rad(60), 1, 4000)
 
-    setRotation(camera, math.rad(270), 0, 0)
-    setTranslation(camera, 0, 0, 0)
+    setRotation(self.camera, math.rad(270), 0, 0)
+    setTranslation(self.camera, 0, 0, 0)
 end
 
 function TopDownEffect:deleteCamera()
