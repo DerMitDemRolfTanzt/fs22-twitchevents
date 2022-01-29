@@ -49,7 +49,7 @@ function TopDownEffect:updateCameraPosition()
 
     if g_currentMission.controlledVehicle ~= nil then
         x, y, z = getTranslation(g_currentMission.controlledVehicle.rootNode)
-        dx, dy, dz = g_currentMission.controlledVehicle:getVehicleWorldDirection()
+        dx, dy, dz = localDirectionToWorld(g_currentMission.controlledVehicle.rootNode, 0, 0, 1)
         yaw = MathUtil.getYRotationFromDirection(-dx, -dz)
     elseif g_currentMission.player ~= nil then
         x, y, z = getTranslation(g_currentMission.player.rootNode)
