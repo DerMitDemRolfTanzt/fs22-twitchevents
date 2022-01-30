@@ -7,6 +7,11 @@ function InvertControlsEffect.new(name, durationMilliseconds, custom_mt)
     return self
 end
 
+function InvertControlsEffect:initialize(event)
+    -- This effect currently only works inside vehicles
+    return g_currentMission.controlledVehicle ~= nil
+end
+
 function InvertControlsEffect:overrideFunctions()
     local effect = self
 
