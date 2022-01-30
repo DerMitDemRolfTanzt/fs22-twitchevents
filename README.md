@@ -29,6 +29,12 @@ _(Although the CrowdControl client will always show successful connection status
 ## Status
 This mod is in a very early stage of development. Use at your own risk!
 
+- [x] Multiplayer support
+- [x] Visual effects
+- [x] Gameplay effects
+- [ ] Effect Cost Balancing
+- [ ] Effect Duration Balancing
+
 
 ## Supported Effects
 * `debug`: Print a debug message on screen
