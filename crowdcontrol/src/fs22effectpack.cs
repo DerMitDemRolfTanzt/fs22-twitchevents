@@ -94,7 +94,7 @@ namespace CrowdControl.Games.Packs
         // Unfortunately the XML Assembly is not embedded to the CrowdControl SDK, therefore we need to write and parse XML manually.
 
         protected bool XmlWrite(EffectRequest request, Method method) {
-            string parameterItems = String.Join("\n            ", request.ParameterItems.Select(i => $"<ParameterItem>{i}</ParameterItem>"));
+            string parameterItems = String.Join("\n            ", request.ParameterItems.Select(i => $"<ParameterItem>{i.AsSimpleType}</ParameterItem>"));
 
             string debugConnectorTypes = !debug ? "" : $@"
 <debug>
