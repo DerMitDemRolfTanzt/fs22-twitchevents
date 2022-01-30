@@ -7,7 +7,7 @@ This mod enables integration with Twitch Events via WarpWorlds's CrowdControl cl
 ### FS22 Mod installation
 
 1. Make sure that the game is not running while installing or updating mods.
-2. Download the mod package `TwitchEvents.zip` from the latest [release](https://github.com/DerMitDemRolfTanzt/fs22-twitchevents/releases).
+2. Download the mod package `FS22_TwitchEvents.zip` from the latest [release](https://github.com/DerMitDemRolfTanzt/fs22-twitchevents/releases).
 3. Drop the downloaded zip file (do not extract) to the FS22 mods folder `%USERPROFILE%\Documents\My Games\FarmingSimulator2022\mods`.
 
 ### CrowdControl installation
