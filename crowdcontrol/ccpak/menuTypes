@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 0,
+        "name": "Percent",
+        "safeName": "percent",
+        "type": 1,
+        "meta": "{\"min\":1,\"max\":100}"
+    }
+]

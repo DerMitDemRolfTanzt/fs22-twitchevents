@@ -3,8 +3,8 @@
     "packName": "Farming Simulator 22",
     "packDescription": "Enables integration with Farming Simulator 22. You need to setup the FS22 Mod aswell in order to use this effect pack.",
     "packAuthor": "DerMitDemRolfTanzt",
-    "packVersion": 1,
-    "fileVersion": 1,
+    "packVersion": 2,
+    "fileVersion": 2,
     "updateURL": null,
     "downloadURL": null,
     "connectorType": 12
