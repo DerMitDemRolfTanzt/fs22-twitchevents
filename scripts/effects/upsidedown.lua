@@ -7,11 +7,6 @@ function UpsideDownEffect.new(name, durationMilliseconds, custom_mt)
     return self
 end
 
-function UpsideDownEffect:initialize(event)
-    -- This effect currently only works outside of vehicles
-    return g_currentMission.controlledVehicle == nil
-end
-
 function UpsideDownEffect:overrideFunctions()
     local effect = self
 
@@ -25,5 +20,16 @@ function UpsideDownEffect:overrideFunctions()
         end
     end
 
+    -- override VehicleCamera.updateRotateNodeRotation
+    local vehicleCamera_updateRotateNodeRotation = function(vehicleCamera, originalFunction)
+        originalFunction(vehicleCamera)
+
+        if effect.active then
+            local x, y, z = getRotation(vehicleCamera.rotateNode)
+            setRotation(vehicleCamera.rotateNode, -x, y, math.rad(180 + math.deg(z)))
+        end
+    end
+
     Player.update = Utils.overwrittenFunction(Player.update, player_update)
+    VehicleCamera.updateRotateNodeRotation = Utils.overwrittenFunction(VehicleCamera.updateRotateNodeRotation, vehicleCamera_updateRotateNodeRotation)
 end
