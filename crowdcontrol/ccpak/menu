@@ -108,5 +108,27 @@
         "price": 10,
         "defaultPrice": 10,
         "tags": null
+    },
+    {
+        "parent": null,
+        "name": "Repair Vehicle",
+        "defaultName": "Repair Vehicle",
+        "safeName": "repairvehicle",
+        "description": "Repair the the currently controlled vehicle",
+        "defaultDescription": "Repair the the currently controlled vehicle",
+        "duration": "00:00:00",
+        "defaultDuration": "00:00:00",
+        "image": "repair",
+        "defaultImage": "repair",
+        "durational": false,
+        "formula": 0,
+        "formulaExpression": null,
+        "kind": 0,
+        "type": null,
+        "paramTypes": null,
+        "hidden": false,
+        "price": 20,
+        "defaultPrice": 20,
+        "tags": null
     }
 ]

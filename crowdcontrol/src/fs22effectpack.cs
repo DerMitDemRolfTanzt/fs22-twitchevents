@@ -204,6 +204,7 @@ namespace CrowdControl.Games.Packs
                     new Effect("Top Down Camera", "topdown"),
                     new Effect("Invert Controls", "invertcontrols"),
                     new Effect("Rotate Camera by 180 degrees", "upsidedown"),
+                    new Effect("Repair Vehicle", "repairvehicle"),
                 };
                 return result;
             }
