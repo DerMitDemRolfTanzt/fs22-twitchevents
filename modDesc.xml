@@ -10,7 +10,7 @@
             <![CDATA[This mod enables integration with Twitch Events via WarpWorlds's CrowdControl client. You need to setup the CrowdControl client in order to use this mod.]]>
         </en>
     </description>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
     <multiplayer supported="true" />
     <iconFilename>img/store.dds</iconFilename>
     <extraSourceFiles>
