@@ -70,6 +70,7 @@ function TEFileIO:pollEvents(dt)
         end
 
         removeXMLProperty(eventIndex, "eventIndex.events")
+        saveXMLFile(eventIndex)
     end
 
     return result
