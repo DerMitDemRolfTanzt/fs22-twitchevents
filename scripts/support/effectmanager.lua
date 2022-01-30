@@ -43,6 +43,7 @@ function TEEffectManager:triggerEffect(event)
         else
             TwitchServerEvent.sendEvent(event)
         end
+        return true
     elseif effect.effectType == "LastingEffect" then
         Logging.info(string.format("[TwitchEvents] Trying to initialize LastingEffect \"%s\" with %d milliseconds duration.", effect.name, effect.durationMilliseconds))
         local result = effect:initialize(event)
