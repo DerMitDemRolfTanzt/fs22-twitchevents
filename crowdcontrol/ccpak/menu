@@ -17,8 +17,8 @@
         "type": null,
         "paramTypes": null,
         "hidden": false,
-        "price": 5,
-        "defaultPrice": 5,
+        "price": 1,
+        "defaultPrice": 1,
         "tags": null
     },
     {
@@ -83,8 +83,8 @@
         "type": null,
         "paramTypes": null,
         "hidden": false,
-        "price": 10,
-        "defaultPrice": 10,
+        "price": 20,
+        "defaultPrice": 20,
         "tags": null
     },
     {
@@ -105,8 +105,8 @@
         "type": null,
         "paramTypes": null,
         "hidden": false,
-        "price": 10,
-        "defaultPrice": 10,
+        "price": 20,
+        "defaultPrice": 20,
         "tags": null
     },
     {
@@ -127,8 +127,8 @@
         "type": null,
         "paramTypes": null,
         "hidden": false,
-        "price": 10,
-        "defaultPrice": 10,
+        "price": 20,
+        "defaultPrice": 20,
         "tags": null
     },
     {
@@ -173,8 +173,8 @@
             "percent"
         ],
         "hidden": false,
-        "price": 20,
-        "defaultPrice": 20,
+        "price": 5,
+        "defaultPrice": 5,
         "tags": null
     }
 ]
