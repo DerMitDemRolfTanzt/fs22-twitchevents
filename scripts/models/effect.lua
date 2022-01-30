@@ -26,6 +26,26 @@ function DirectEffect:run(event)
     return true
 end
 
+-- DirectServerEffect
+
+DirectServerEffect = {}
+local DirectServerEffect_mt = Class(DirectServerEffect, TEEffect)
+
+function DirectServerEffect.new(name, custom_mt)
+    local self = TEEffect.new("DirectServerEffect", name, custom_mt or DirectServerEffect_mt)
+    return self
+end
+
+function DirectServerEffect:writeStream(event, streamId, connection)
+end
+
+function DirectServerEffect:readStream(event, streamId, connection)
+end
+
+function DirectServerEffect:run(event)
+    return true
+end
+
 -- LastingEffect
 
 LastingEffect = {}

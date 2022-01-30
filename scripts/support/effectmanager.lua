@@ -14,8 +14,12 @@ function TEEffectManager:registerEffect(effect)
     self.effects[effect.name] = effect
 end
 
+function TEEffectManager:getEffect(event)
+    return self.effects[event.FinalCode]
+end
+
 function TEEffectManager:triggerEffect(event)
-    local effect = self.effects[event.FinalCode]
+    local effect = self:getEffect(event)
 
     if effect == nil then
         Logging.warning(string.format("[TwitchEvents] Effect \"%s\" triggered by event \"%s\" has not been registered.", event.FinalCode, event.ID))
@@ -33,6 +37,12 @@ function TEEffectManager:triggerEffect(event)
             Logging.info(string.format("[TwitchEvents] Running DirectEffect \"%s\" was not successful.", effect.name))
         end
         return result
+    elseif effect.effectType == "DirectServerEffect" then
+        if g_server ~= nil then
+            effect:run(event)
+        else
+            TwitchServerEvent.sendEvent(event)
+        end
     elseif effect.effectType == "LastingEffect" then
         Logging.info(string.format("[TwitchEvents] Trying to initialize LastingEffect \"%s\" with %d milliseconds duration.", effect.name, effect.durationMilliseconds))
         local result = effect:initialize(event)
