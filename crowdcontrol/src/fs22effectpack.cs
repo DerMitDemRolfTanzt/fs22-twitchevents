@@ -47,7 +47,7 @@ namespace CrowdControl.Games.Packs
     {
         private const bool debug = false;
 
-        private const string ccEffectPackVersion = "0.1.0";
+        private const string ccEffectPackVersion = "0.2.0";
         private const string xmlSchemaVersion = "0.1.0";
 
         private static readonly string connectorPath = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games/FarmingSimulator2022/twitchEvents/connector");
