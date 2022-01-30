@@ -42,7 +42,8 @@ This mod is in a very early stage of development. Use at your own risk!
 * `topdown`: Force Top-Down Camera for a few seconds
 * `invertcontrols`: Invert left/right axis controls for a few seconds
 * `upsidedown`: Rotate camera by 180 degrees for a few seconds
-* `repairvehicle`: Repair the the currently controlled vehicle
+* `repairvehicle`: Repair the currently controlled vehicle
+* `damagevehicle`: Damage the currently controlled vehicle
 
 
 ## License

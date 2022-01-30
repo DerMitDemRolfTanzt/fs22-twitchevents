@@ -21,7 +21,7 @@ source(Utils.getFilename("scripts/effects/invisiblevehicle.lua", g_currentModDir
 source(Utils.getFilename("scripts/effects/topdown.lua", g_currentModDirectory))
 source(Utils.getFilename("scripts/effects/invertcontrols.lua", g_currentModDirectory))
 source(Utils.getFilename("scripts/effects/upsidedown.lua", g_currentModDirectory))
-source(Utils.getFilename("scripts/effects/repairvehicle.lua", g_currentModDirectory))
+source(Utils.getFilename("scripts/effects/vehicledamage.lua", g_currentModDirectory))
 
 -- mod definition
 TwitchEvents = {}
@@ -40,7 +40,8 @@ function TwitchEvents:loadMap(name)
     TwitchEvents.effectManager:registerEffect(TopDownEffect.new("topdown", 10000))
     TwitchEvents.effectManager:registerEffect(InvertControlsEffect.new("invertcontrols", 10000))
     TwitchEvents.effectManager:registerEffect(UpsideDownEffect.new("upsidedown", 10000))
-    TwitchEvents.effectManager:registerEffect(RepairVehicleEffect.new("repairvehicle"))
+    TwitchEvents.effectManager:registerEffect(VehicleDamageEffect.new("repairvehicle", -1))
+    TwitchEvents.effectManager:registerEffect(VehicleDamageEffect.new("damagevehicle", 1))
 end
 
 function TwitchEvents:deleteMap()

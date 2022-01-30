@@ -1,12 +1,13 @@
-RepairVehicleEffect = {}
-local RepairVehicleEffect_mt = Class(RepairVehicleEffect, DirectServerEffect)
+VehicleDamageEffect = {}
+local VehicleDamageEffect_mt = Class(VehicleDamageEffect, DirectServerEffect)
 
-function RepairVehicleEffect.new(name, custom_mt)
-    local self = DirectServerEffect.new(name, custom_mt or RepairVehicleEffect_mt)
+function VehicleDamageEffect.new(name, factor, custom_mt)
+    local self = DirectServerEffect.new(name, custom_mt or VehicleDamageEffect_mt)
+    self.factor = factor or 1
     return self
 end
 
-function RepairVehicleEffect:run(event)
+function VehicleDamageEffect:run(event)
     local vehicle = g_currentMission.controlledVehicle or self.vehicle
     if vehicle == nil then
         return false
@@ -21,16 +22,16 @@ function RepairVehicleEffect:run(event)
 
     -- repair each vehicle
     for index, v in ipairs(vehicle.childVehicles) do
-        v:addDamageAmount(-percent/100.0, true)
+        v:addDamageAmount(self.factor * percent / 100.0, true)
     end
 
     return true
 end
 
-function RepairVehicleEffect:writeStream(event, streamId, connection)
+function VehicleDamageEffect:writeStream(event, streamId, connection)
     NetworkUtil.writeNodeObject(streamId, g_currentMission.controlledVehicle)
 end
 
-function RepairVehicleEffect:readStream(event, streamId, connection)
+function VehicleDamageEffect:readStream(event, streamId, connection)
     self.vehicle = NetworkUtil.readNodeObject(streamId)
 end

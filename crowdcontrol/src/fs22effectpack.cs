@@ -209,6 +209,7 @@ namespace CrowdControl.Games.Packs
 
                     new Effect("Vehicle condition", "vehiclecondition", ItemKind.Folder),
                     new Effect("Repair Vehicle by ... %", "repairvehicle", new[]{"percent"}, "vehiclecondition"),
+                    new Effect("Damage Vehicle by ... %", "damagevehicle", new[]{"percent"}, "vehiclecondition"),
                 };
                 return result;
             }
