@@ -12,9 +12,16 @@ function RepairVehicleEffect:run(event)
         return false
     end
 
+    if event.ParameterItems[1] == nil then
+        return false
+    end
+
+    -- percent to repair
+    local percent = tonumber(event.ParameterItems[1])
+
     -- repair each vehicle
     for index, v in ipairs(vehicle.childVehicles) do
-        v:repairVehicle()
+        v:addDamageAmount(-percent/100.0, true)
     end
 
     return true

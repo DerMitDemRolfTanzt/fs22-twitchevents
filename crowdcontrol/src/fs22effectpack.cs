@@ -208,11 +208,16 @@ namespace CrowdControl.Games.Packs
                     new Effect("Rotate Camera by 180 degrees", "upsidedown", "visual"),
 
                     new Effect("Vehicle condition", "vehiclecondition", ItemKind.Folder),
-                    new Effect("Repair Vehicle", "repairvehicle", "vehiclecondition"),
+                    new Effect("Repair Vehicle by ... %", "repairvehicle", new[]{"percent"}, "vehiclecondition"),
                 };
                 return result;
             }
         }
+
+        public override List<ItemType> ItemTypes => new List<ItemType>(new[]
+        {
+            new ItemType("Percent", "percent", ItemType.Subtype.Slider, "{\"min\":1,\"max\":100}")
+        });
 
         #endregion
 
