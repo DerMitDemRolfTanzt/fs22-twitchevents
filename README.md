@@ -34,6 +34,7 @@ This mod is in a very early stage of development. Use at your own risk!
 - [x] Gameplay effects
 - [ ] Effect Cost Balancing
 - [ ] Effect Duration Balancing
+- [ ] Error handling for delayed or remote effects
 
 
 ## Supported Effects
