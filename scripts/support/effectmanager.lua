@@ -15,14 +15,14 @@ function TEEffectManager:registerEffect(effect)
 end
 
 function TEEffectManager:getEffect(event)
-    return self.effects[event.FinalCode]
+    return self.effects[event.BaseCode]
 end
 
 function TEEffectManager:triggerEffect(event)
     local effect = self:getEffect(event)
 
     if effect == nil then
-        Logging.warning(string.format("[TwitchEvents] Effect \"%s\" triggered by event \"%s\" has not been registered.", event.FinalCode, event.ID))
+        Logging.warning(string.format("[TwitchEvents] Effect \"%s\" triggered by event \"%s\" has not been registered.", event.BaseCode, event.ID))
         return false
     end
     if self.runningEffects[effect.name] ~= nil then
