@@ -200,11 +200,15 @@ namespace CrowdControl.Games.Packs
                 List<Effect> result = new List<Effect>
                 {
                     new Effect("Debug Message", "debug"),
-                    new Effect("Invisible Vehicle", "invisiblevehicle"),
-                    new Effect("Top Down Camera", "topdown"),
-                    new Effect("Invert Controls", "invertcontrols"),
-                    new Effect("Rotate Camera by 180 degrees", "upsidedown"),
-                    new Effect("Repair Vehicle", "repairvehicle"),
+
+                    new Effect("Visual Effects / Trolls", "visual", ItemKind.Folder),
+                    new Effect("Invisible Vehicle", "invisiblevehicle", "visual"),
+                    new Effect("Top Down Camera", "topdown", "visual"),
+                    new Effect("Invert Controls", "invertcontrols", "visual"),
+                    new Effect("Rotate Camera by 180 degrees", "upsidedown", "visual"),
+
+                    new Effect("Vehicle condition", "vehiclecondition", ItemKind.Folder),
+                    new Effect("Repair Vehicle", "repairvehicle", "vehiclecondition"),
                 };
                 return result;
             }
