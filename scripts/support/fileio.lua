@@ -97,6 +97,8 @@ function TEFileIO:parseEvent(xmlFile, index)
     local parameterItemsFormat = "%s.ParameterItems.ParameterItem(%d)"
     while hasXMLProperty(xmlFile, string.format(parameterItemsFormat, self:eventPath(index), i)) do
         table.insert(event.ParameterItems, getXMLString(xmlFile, string.format(parameterItemsFormat, self:eventPath(index), i)))
+
+        i = i + 1
     end
 
     return event
